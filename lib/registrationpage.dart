@@ -21,7 +21,7 @@ class _registrationPageState extends State<registrationPage> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                Center(
+                const Center(
                   child: Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
@@ -31,7 +31,7 @@ class _registrationPageState extends State<registrationPage> {
                     ),
                   ),
                 ),
-                Column(
+                const Column(
                   children: [
                     SizedBox(
                       width: 340,
@@ -116,14 +116,14 @@ class _registrationPageState extends State<registrationPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade400),
-                    child: Text('Create Account'))
+                    child: const Text('Create Account'))
               ],
             ),
           )),

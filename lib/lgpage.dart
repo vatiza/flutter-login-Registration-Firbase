@@ -15,12 +15,12 @@ class _loginpageState extends State<loginpage> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text("data"),
+          title: const Text("Login"),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
@@ -31,7 +31,7 @@ class _loginpageState extends State<loginpage> {
               ),
               Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 300,
                     child: TextField(
                       decoration: InputDecoration(
@@ -44,10 +44,10 @@ class _loginpageState extends State<loginpage> {
                           labelText: "Email"),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 300,
                     child: TextField(
                       decoration: InputDecoration(
@@ -63,10 +63,12 @@ class _loginpageState extends State<loginpage> {
                     ),
                   ),
                   Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: ElevatedButton(
                         onPressed: null,
-                        child: Text(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade300),
+                        child: const Text(
                           'Login',
                           style: TextStyle(
                             fontSize: 20,
@@ -76,7 +78,7 @@ class _loginpageState extends State<loginpage> {
                       )),
                 ],
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextButton(
@@ -93,7 +95,10 @@ class _loginpageState extends State<loginpage> {
                               builder: (context) => const registrationPage()),
                         );
                       },
-                      child: Text('Create an New Account'))
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Create an New Account'),
+                      ))
                 ],
               )
             ],
