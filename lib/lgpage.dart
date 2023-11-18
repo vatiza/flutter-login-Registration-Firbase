@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/registrationpage.dart';
 
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
@@ -16,7 +17,7 @@ class _loginpageState extends State<loginpage> {
         appBar: AppBar(
           title: const Text("data"),
         ),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
@@ -62,9 +63,8 @@ class _loginpageState extends State<loginpage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: ElevatedButton(
-                      
+                      padding: EdgeInsets.all(10.0),
+                      child: ElevatedButton(
                         onPressed: null,
                         child: Text(
                           'Login',
@@ -72,10 +72,8 @@ class _loginpageState extends State<loginpage> {
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
-                    
                         ),
-                    ) 
-                  ),
+                      )),
                 ],
               ),
               Column(
@@ -88,7 +86,14 @@ class _loginpageState extends State<loginpage> {
               Column(
                 children: [
                   TextButton(
-                      onPressed: null, child: Text('Create an New Account'))
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const registrationPage()),
+                        );
+                      },
+                      child: Text('Create an New Account'))
                 ],
               )
             ],
