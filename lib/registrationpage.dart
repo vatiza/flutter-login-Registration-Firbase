@@ -68,6 +68,7 @@ class _registrationPageState extends State<registrationPage> {
                     SizedBox(
                       width: 340,
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius:
