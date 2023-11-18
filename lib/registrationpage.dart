@@ -12,42 +12,112 @@ class _registrationPageState extends State<registrationPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'New Account',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          ),
-        ),
-        body: const Column(
-          children: [
-            Center(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Create New account',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
+          appBar: AppBar(
+            title: const Text(
+              'New Account',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            Column(
+          ),
+          body: const SingleChildScrollView(
+            child: Column(
               children: [
-                SizedBox(
-                  width: 340,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.person),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
-                        labelText: 'First Name',
-                        labelStyle: TextStyle(fontSize: 20)),
+                Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Create New account',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
                   ),
+                ),
+                Column(
+                  children: [
+                    SizedBox(
+                      width: 340,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          labelText: 'First Name',
+                          labelStyle: TextStyle(fontSize: 20),
+                          suffixIcon: Icon(Icons.person),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: 340,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                            ),
+                            labelText: 'Last Name',
+                            labelStyle: TextStyle(fontSize: 20),
+                            suffixIcon: Icon(Icons.person)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: 340,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                            ),
+                            labelText: 'Phone Number',
+                            labelStyle: TextStyle(fontSize: 20),
+                            suffixIcon: Icon(Icons.phone)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: 340,
+                      child: TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                            ),
+                            labelText: 'Email',
+                            labelStyle: TextStyle(fontSize: 20),
+                            suffixIcon: Icon(Icons.email)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                      width: 340,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                            ),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(fontSize: 20),
+                            suffixIcon: Icon(Icons.lock)),
+                        obscureText: true,
+                        obscuringCharacter: '*',
+                      ),
+                    ),
+                  ],
                 )
               ],
-            )
-          ],
-        ),
-      ),
+            ),
+          )),
     );
   }
 }
