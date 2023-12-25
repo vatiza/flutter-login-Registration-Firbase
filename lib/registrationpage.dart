@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/lgpage.dart';
 
 class registrationPage extends StatefulWidget {
   const registrationPage({super.key});
@@ -52,7 +53,9 @@ class _registrationPageState extends State<registrationPage> {
                     SizedBox(
                       width: 340,
                       child: TextField(
+                        
                         decoration: InputDecoration(
+                          
                             border: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
@@ -123,7 +126,14 @@ class _registrationPageState extends State<registrationPage> {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade400),
-                    child: const Text('Create Account'))
+                    child: const Text('Create Account')),
+                TextButton(
+                    onPressed: () {
+                      
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => loginpage()));
+                    },
+                    child: Text('Login'))
               ],
             ),
           )),

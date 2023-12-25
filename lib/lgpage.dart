@@ -15,7 +15,7 @@ class _loginpageState extends State<loginpage> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text("Login"),
+          title: const Text("Doctor Help"),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -59,7 +59,6 @@ class _loginpageState extends State<loginpage> {
                           suffixIcon: Icon(Icons.password),
                           labelText: "Password"),
                       obscureText: true,
-                      obscuringCharacter: '*',
                     ),
                   ),
                   Padding(
@@ -67,7 +66,7 @@ class _loginpageState extends State<loginpage> {
                       child: ElevatedButton(
                         onPressed: null,
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade300),
+                            primary: Color.fromARGB(255, 2, 226, 40)),
                         child: const Text(
                           'Login',
                           style: TextStyle(
